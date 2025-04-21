@@ -1,0 +1,15 @@
+@import "content/about.css";
+
+@media (-moz-bool-pref: "pdf.dark.mode") {
+  :root:has(head script[src^="resource://pdf.js"]) {
+    .page {
+      filter: invert(100%) hue-rotate(180deg) contrast(85%) !important;
+    }
+  }
+}
+
+@-moz-document domain("music.youtube.com") {
+  #side-panel {
+    z-index: 20000;
+  }
+}

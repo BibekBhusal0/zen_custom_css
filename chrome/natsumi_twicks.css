@@ -1,0 +1,29 @@
+* {
+  @media not (-moz-bool-pref: "natsumi.urlbar.disabled") {
+    #urlbar[breakout-extend] #urlbar-input {
+      font-size: 17px !important;
+      padding-bottom: 2px !important;
+    }
+  }
+
+  --natsumi-mat-hz-background-main: rgba(255, 255, 255, 0.6);
+
+  @media (prefers-color-scheme: dark) {
+    --natsumi-mat-hz-background: #d1e5b96b;
+    --natsumi-mat-hz-background-main: rgba(0, 0, 0, 0.6);
+  }
+
+  @media not (-moz-bool-pref: "natsumi.pip.disabled") {
+    @-moz-document url("chrome://global/content/pictureinpicture/player.xhtml") {
+      #controls {
+        #controls-bottom {
+          background-color: var(--natsumi-mat-hz-background-main) !important;
+        }
+
+        &>button {
+          background-color: var(--natsumi-mat-hz-background-main) !important;
+        }
+      }
+    }
+  }
+}

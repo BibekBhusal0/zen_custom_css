@@ -1,0 +1,148 @@
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 20%;
+  }
+
+  100% {
+    background-position: 200% 20%;
+  }
+}
+
+@-moz-document url-prefix("chrome:") {
+  #zen-media-controls-toolbar {
+    &.playing {
+      toolbaritem {
+        /*       background-color: black !important; */
+        border: 1px var(--natsumi-primary-color) solid;
+      }
+
+      /*     padding: 16px 24px;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.01);
+    &::after {
+      opacity: 1 !important;
+      animation: animateGlow 5s cubic-bezier(0.1, 0.7, 0.5, 0.1) infinite;
+    }
+    &:hover::after {
+      height: 150%;
+    } */
+    }
+
+    /*   &::after {
+    position: absolute;
+    content: "";
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.9) translateZ(0);
+    filter: blur(15px);
+    opacity: 0 !important;
+    transition: all 0.3s liner !important;
+    background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--zen-primary-color) 10%, black),
+      var(--zen-primary-color),
+      color-mix(in srgb, var(--zen-primary-color) 25%, white),
+      var(--zen-primary-color),
+      light-dark(#fffd, #000d),
+      light-dark(#fffd, #000d),
+      var(--zen-primary-color),
+      color-mix(in srgb, var(--zen-primary-color) 50%, white),
+      color-mix(in srgb, var(--zen-primary-color) 25%, white),
+      var(--zen-primary-color),
+      color-mix(in srgb, var(--zen-primary-color) 25%, black),
+      light-dark(#fffd, #000d),
+      color-mix(in srgb, var(--zen-primary-color) 10%, black),
+      light-dark(#fffd, #000d),
+      color-mix(in srgb, var(--zen-primary-color) 75%, black),
+      color-mix(in srgb, var(--zen-primary-color) 50%, black),
+      color-mix(in srgb, var(--zen-primary-color) 25%, black),
+      color-mix(in srgb, var(--zen-primary-color) 10%, black),
+      light-dark(#fffd, #000d)
+    );
+    background-size: 200% 200%;
+  } */
+    & .show-on-hover {
+      max-height: unset !important;
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      padding-right: 6px;
+      pointer-events: none;
+      transition:
+        max-height 0.2s ease,
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        padding 0.2s ease;
+    }
+
+    & #zen-media-focus-button::after {
+      display: none !important;
+    }
+
+    #zen-media-controls-hbox {
+      order: 0 !important;
+      height: 0 !important;
+      overflow: hidden !important;
+    }
+
+    #zen-media-progress-hbox label {
+      scale: 0 !important;
+      width: 0 !important;
+      transition: all 0.15s ease-in-out 0.15 !important;
+    }
+
+    #zen-media-progress-bar {
+      margin: 0 !important;
+      transition: all 0.15s !important;
+    }
+
+    #zen-media-info-container {
+      position: relative;
+
+      #zen-media-info-vbox {
+        width: 100%;
+      }
+
+      #zen-media-buttons-hbox>toolbarbutton {
+        opacity: 0 !important;
+        transition: opacity 0.3s ease-in-out !important;
+        width: 0;
+
+        &:hover {
+          opacity: 1 !important;
+        }
+      }
+
+      &:hover {
+        #zen-media-buttons-hbox>toolbarbutton {
+          width: unset;
+        }
+      }
+    }
+
+    &:hover {
+      #zen-media-progress-bar {
+        margin: 1em !important;
+        scale: 1 !important;
+      }
+
+      #zen-media-controls-hbox {
+        height: fit-content !important;
+        opacity: 1 !important;
+      }
+
+      #zen-media-progress-hbox label {
+        scale: 1 !important;
+        width: unset !important;
+      }
+    }
+
+    #zen-media-main-vbox>vbox {
+      order: 1 !important;
+    }
+  }
+}
