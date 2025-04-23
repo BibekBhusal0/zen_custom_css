@@ -1,12 +1,11 @@
 @-moz-document url-prefix("about:addons") {
   #full {
-    --sidebar-collapsed-width: 60px;
+    --sidebar-collapsed-width: 50px;
     display: block !important;
 
     #sidebar {
       position: absolute !important;
       width: var(--sidebar-collapsed-width) !important;
-      transition: all 0.1s ease-in-out !important;
       z-index: 20 !important;
       background: var(--natsumi-mat-ga-background) !important;
       backdrop-filter: blur(var(--natsumi-mat-ga-blur-radius));
@@ -15,13 +14,10 @@
 
       #categories {
         .category {
-          margin-left: 10px !important;
-          transition: all 0.1s ease-in-out !important;
+          margin-left: 2px !important;
 
           .category-name {
             display: none;
-            scale: 0;
-            transition: all 0.1s ease-in-out !important;
           }
 
           &[aria-selected="true"] {
@@ -32,12 +28,11 @@
 
       sidebar-footer {
         .sidebar-footer-list {
-          margin-left: 10px !important;
-          transition: all 0.1s ease-in-out !important;
+          margin-left: 2px !important;
         }
 
         .sidebar-footer-label {
-          scale: 0 !important;
+          display: none;
         }
       }
 
@@ -46,22 +41,21 @@
 
         #categories {
           .category {
-            margin-left: 18px !important;
+            margin-left: 10px !important;
 
             .category-name {
               display: block;
-              scale: 1 !important;
             }
           }
         }
 
         sidebar-footer {
           .sidebar-footer-list {
-            margin-left: 18px !important;
+            margin-left: 10px !important;
           }
 
           .sidebar-footer-label {
-            scale: 1 !important;
+            display: block;
           }
         }
       }
@@ -111,7 +105,6 @@
                 height: 80% !important;
               }
             }
-
           }
 
           &[type="theme"]>section {
