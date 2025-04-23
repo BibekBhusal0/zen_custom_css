@@ -1,4 +1,5 @@
 @import "content/about.css";
+@import "content/addons.css";
 
 @media (-moz-bool-pref: "pdf.dark.mode") {
   :root:has(head script[src^="resource://pdf.js"]) {
