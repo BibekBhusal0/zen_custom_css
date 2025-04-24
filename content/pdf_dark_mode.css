@@ -1,0 +1,9 @@
+@media not (-moz-bool-pref: "pdf.dark.mode.disabled") {
+  :root:has(head script[src^="resource://pdf.js"]) {
+
+    .page,
+    .thumbnail {
+      filter: invert(100%) hue-rotate(180deg) contrast(85%) !important;
+    }
+  }
+}

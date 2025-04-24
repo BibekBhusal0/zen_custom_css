@@ -2,14 +2,7 @@
 @import "content/addons.css";
 @import "content/memory.css";
 @import "content/preferences.css";
-
-@media (-moz-bool-pref: "pdf.dark.mode") {
-  :root:has(head script[src^="resource://pdf.js"]) {
-    .page {
-      filter: invert(100%) hue-rotate(180deg) contrast(85%) !important;
-    }
-  }
-}
+@import "content/pdf_dark_mode.css";
 
 @-moz-document domain("music.youtube.com") {
   #side-panel {
